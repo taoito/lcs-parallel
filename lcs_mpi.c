@@ -103,8 +103,8 @@ int main(int argc, char *argv[]) {
 			fTab[0][j] = 0;
 		}
 
-		clearwctimer(timer_1);
-  		startwctimer(timer_1);
+		clear_timer(timer_1);
+  		start_timer(timer_1);
 
 		for (c = 0; c <= num_procs && d < (num_procs*2-1); c++) {
 
@@ -256,8 +256,8 @@ int main(int argc, char *argv[]) {
 		traceback(listSubY[0],lineX,fTab,rSize,currentJ,&count,res);
 		res[count] = '\0';
 
-  		stopwctimer(timer_1);
-  		printf("Time Taken: %.2lfs\n", getwctimer(timer_1));
+  		stop_timer(timer_1);
+  		printf("Time Taken: %.2lfs\n", get_timer(timer_1));
 		printf("Length = %d\n",count);
 
 		for (i = count-1; i >=0; i--) 

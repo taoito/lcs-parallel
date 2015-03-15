@@ -87,8 +87,8 @@ int main(int argc, char *argv[]) {
 		fTab[0][j] = 0;
 	}
 
-	clearwctimer(timer_1);
-  	startwctimer(timer_1);
+	clear_timer(timer_1);
+  	start_timer(timer_1);
 
 	for (worker = 0; worker < NUM_THREADS; worker++) {	
 		pthread_create(&threads[worker],NULL,computeBlock,(void *)&worker);
@@ -104,8 +104,8 @@ int main(int argc, char *argv[]) {
 		printf("\n");
 	}*/
 
-  	stopwctimer(timer_1);
-  	printf("Time Taken: %.2lfs\n", getwctimer(timer_1));
+  	stop_timer(timer_1);
+  	printf("Time Taken: %.2lfs\n", get_timer(timer_1));
 
 	traceback(lineY,lineX,fTab,ySize,xSize,0);
 	printf("\n");

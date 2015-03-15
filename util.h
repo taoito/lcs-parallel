@@ -21,11 +21,11 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+#define clear_timer(t) (t = 0.0)
+#define start_timer(t) (t -= wClockSeconds())
+#define stop_timer(t)  (t += wClockSeconds())
+#define get_timer(t)   (t)
 #define util_max(a, b) ((a) >= (b) ? (a) : (b))
 #define util_min(a, b) ((a) >= (b) ? (b) : (a))
-#define clearwctimer(tmr) (tmr = 0.0)
-#define startwctimer(tmr) (tmr -= gk_WClockSeconds())
-#define stopwctimer(tmr)  (tmr += gk_WClockSeconds())
-#define getwctimer(tmr)   (tmr)
 
 double wClockSeconds(void);

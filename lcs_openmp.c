@@ -84,8 +84,8 @@ int main(int argc, char *argv[]) {
 
 	int d,r,c,rSize,cSize,addR,addC;
 
-	clearwctimer(timer_1);
-  	startwctimer(timer_1);
+	clear_timer(timer_1);
+  	start_timer(timer_1);
 
 	#pragma omp parallel private(i,d,j,r,c,rSize,cSize,addR,addC) num_threads(NUM_THREADS)
 	{
@@ -147,8 +147,8 @@ int main(int argc, char *argv[]) {
 		printf("\n");
 	}*/
 
-  	stopwctimer(timer_1);
-  	printf("Time Taken: %.2lfs sec\n", getwctimer(timer_1));
+  	stop_timer(timer_1);
+  	printf("Time Taken: %.2lfs sec\n", get_timer(timer_1));
 
 	traceback(lineY,lineX,fTab,ySize,xSize,0);
 	printf("\n");
